@@ -1,11 +1,14 @@
-# CBFixesAndTweaks
-Script to automate CB Fixes and Tweaks
-So far this script has been tested on the Toshiba Chromebook 2 (Swanky) running Ubuntu 16.04.
-It fixes sound (unfortunately the mic still doesn't work) and keyboard layout.
-See http://www.fascinatingcaptain.com/blog/automate-chromebook-fixes-for-linux/
+# peppy-tweaks
+Fix keyboard mapping in Linux on Chromebook Peppy.
+
+## Mapping
+* Shift + Backspace is mapped to Delete key.
+* Some multimedia keys are mapped to their multimedia functions (in Linux they default to F keys). Original F key is emulated by using Ctrl + Alt + Multimedia key.
 
 # How to use
-Copy and paste these commands in a terminal window and reboot!
+Copy and paste these commands in a terminal window:
 
-cd ~/Downloads; sudo apt-get -y install curl; curl -LOk https://github.com/fascinatingcaptain/CBFixesAndTweaks/archive/master.tar.gz; tar -zxvf master.tar.gz; cd CBFixesAndTweaks-master; sudo -E bash CBFixesAndTweaks.sh
+```bash
+cd ~/Downloads; curl -LOk https://github.com/JakubPetriska/peppy-tweaks/archive/master.tar.gz; tar -zxvf master.tar.gz; cd peppy-tweaks-master; ./tweak.sh
+```
 
