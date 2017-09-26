@@ -6,15 +6,14 @@
 # get CB model codename
 CBCODENAME=$(sudo dmidecode -s system-product-name)
 
-## functions ##
 fix_sound() {
   ## for Baytrail TCB2
   # stop sound service
   sudo alsa force-unload
-  
+
   # make backup of original sound.state file
   sudo cp -n /var/lib/alsa/asound.state /var/lib/alsa/asound.state.bck
-  
+
   # copy new sound.state file
   sudo cp asound.state /var/lib/alsa
 }
@@ -29,15 +28,15 @@ fix_keyboard_keys() {
 	# update config
 	sudo rm -rf /var/lib/xkb/*
 }
-## ..functions ##
 
 # check for Baytrail CBs
 if [ "$CBCODENAME" == "Swanky" ]
 then
 	fix_sound
+
+  echo "*******************************************************"
+  echo "Fixed sound for Baytrail Chromebook"
 fi
-echo "*******************************************************"
-echo "Fixed sound for Baytrail Chromebook"
 
 # apply keyboard remapping
 fix_keyboard_keys
