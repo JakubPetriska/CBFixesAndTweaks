@@ -94,6 +94,12 @@ xkb_symbols "editing" {
     key <FK10> { 	[XF86AudioRaiseVolume, NoSymbol, NoSymbol, NoSymbol, F10] 	};
     // key <LWIN> { 	[Caps_Lock] };
 
+
+    key   <UP> {	[  Up			]	};
+    key <LEFT> {	[  Left			]	};
+    key <DOWN> {	[  Down			]	};
+    key <RGHT> {	[  Right		]	};
+
     // added by Captain
     // key <UP>   {	[  Up, Page_Up			]	};
     // key <LEFT> {	[  Left, Home			]	};
